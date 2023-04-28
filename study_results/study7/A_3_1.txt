@@ -1,0 +1,20 @@
+Order: HFNL
+_____________________________
+Using Quartile at frame 41
+
+Input: base_configs/msg/msg_n_1.txt
+Output: variants/study7/near_out/A_3_1.txt
+
+In this transmission of 142 Bit
+0 errors were detected.
+Resulting in a BER of 0
+Those were 0 '0 -> 1' errors and 0 '1 -> 0' errors
+
+Input: base_configs/msg/msg_f_1.txt
+Output: variants/study7/far_out/A_3_1.txt
+
+In this transmission of 142 Bit
+0 errors were detected.
+Resulting in a BER of 0
+Those were 0 '0 -> 1' errors and 0 '1 -> 0' errors
+

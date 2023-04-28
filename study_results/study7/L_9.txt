@@ -1,0 +1,84 @@
+Min Frame: 50
+Max Frame: 61
+
+Max Diff Frame: 61
+Order: HFNL
+Order: HFNL
+Order: HFNL
+Order: HFNL
+_____________________________
+Using MinMax
+
+Input: base_configs/msg/msg_n_1.txt
+Output: variants/study7/near_out/L_9_0
+
+In this transmission of 142 Bit
+0 errors were detected.
+Resulting in a BER of 0
+Those were 0 '0 -> 1' errors and 0 '1 -> 0' errors
+
+Input: base_configs/msg/msg_f_1.txt
+Output: variants/study7/far_out/L_9_0
+
+In this transmission of 142 Bit
+0 errors were detected.
+Resulting in a BER of 0
+Those were 0 '0 -> 1' errors and 0 '1 -> 0' errors
+
+_____________________________
+Using Quartile
+
+Input: base_configs/msg/msg_n_1.txt
+Output: variants/study7/near_out/L_9_1
+
+In this transmission of 142 Bit
+0 errors were detected.
+Resulting in a BER of 0
+Those were 0 '0 -> 1' errors and 0 '1 -> 0' errors
+
+Input: base_configs/msg/msg_f_1.txt
+Output: variants/study7/far_out/L_9_1
+
+In this transmission of 142 Bit
+0 errors were detected.
+Resulting in a BER of 0
+Those were 0 '0 -> 1' errors and 0 '1 -> 0' errors
+
+_____________________________
+Using Median
+
+Input: base_configs/msg/msg_n_1.txt
+Output: variants/study7/near_out/L_9_2
+
+In this transmission of 142 Bit
+2 errors were detected.
+Resulting in a BER of 0.014084507042253521
+Those were 1 '0 -> 1' errors and 1 '1 -> 0' errors
+
+Input: base_configs/msg/msg_f_1.txt
+Output: variants/study7/far_out/L_9_2
+
+In this transmission of 142 Bit
+1 errors were detected.
+Resulting in a BER of 0.007042253521126761
+Those were 0 '0 -> 1' errors and 1 '1 -> 0' errors
+
+_____________________________
+Using ArithMean
+
+Input: base_configs/msg/msg_n_1.txt
+Output: variants/study7/near_out/L_9_3
+
+In this transmission of 142 Bit
+2 errors were detected.
+Resulting in a BER of 0.014084507042253521
+Those were 1 '0 -> 1' errors and 1 '1 -> 0' errors
+
+Input: base_configs/msg/msg_f_1.txt
+Output: variants/study7/far_out/L_9_3
+
+In this transmission of 142 Bit
+1 errors were detected.
+Resulting in a BER of 0.007042253521126761
+Those were 0 '0 -> 1' errors and 1 '1 -> 0' errors
+

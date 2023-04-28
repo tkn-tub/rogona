@@ -1,0 +1,52 @@
+Timing Offset
+replacement or supplement?
+
+I) Replacement?
+
+d = 1.2 dy = 0 t_sym 50 ms => yes
+d = 1.6 dy = 0 t_sym 50 ms => greater ISI makes it still difficult
+d = 1.6 dy = 0 t_sym 75 ms => yes
+
+off_far = 0.0 0.1 0.51
+
+II) Supporting element
+
+1) pick a doable dy, half it, try with offsets:
+
+d = 1.6 dy = 10/2 = 5 t_sym 50 ms
+d = 2.0 dy = 10/2 = 5 t_sym 75 ms
+d = 2.4 dy = 16/2 = 8 t_sym 75 ms => off_n wertvoller (z.B. 0.45)
+d = 2.8 dy = ??   = 10 t_sym 75 ms => off_n INTERESTING 0.5 -> try up to 0.7
+d = 3.2 dy = 20/2 = 10 t_scm 100 ms => off_n between 0.45 and 0.5
+
+off_far = -0.5 0.1 0.51
+
+python study4.py
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+pick 3 interesting cases.
+
+1. dy >>   ; negative offset exploration (strong amplitude deficit and near would peak late for ISI reduction AND max diff)
+	off [-0.8, 0.1, 0.0]
+	d = 200 ??
+2. dy = 0  ; replacement?
+	off [-0.5, 0.1, 0.5]
+	for d = 160 and d = 240 ??
+3. dy = 4(%)  ; exploring a range of offsets for a medium case
+	off [-0.3, 0.1, 0.3]
+	d = ??

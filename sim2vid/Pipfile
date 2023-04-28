@@ -1,0 +1,40 @@
+# from: https://webgit.ccs-labs.org/git/CCS/mamoko2020pogona/src/branch/nanocom2021air/Pipfile
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+openfoamparser = "*"
+numpy = "*"
+ruamel-yaml = "*"
+coloredlogs = "*"
+argparse = "*"
+scipy = "*"
+pandas = "*"
+matplotlib = "*"
+seaborn = "*"
+pogona = {editable = true,path = "subtrees/pogona-simulator/"}
+pdbpp = "*"
+sphinx = "*"
+autodocsumm = "*"
+gprof2dot = "*"
+pytest = "*"
+flake8 = "*"
+# Snakemake dependency the PyPi version of which
+# currently doesn't work with Python 3.8:
+# https://github.com/pytries/datrie/pull/76
+# datrie = {editable = true,git = "https://github.com/ashwinvis/datrie.git",ref = "python3.8"}
+snakemake = "*"
+pygraphviz = "*"  # for Snakemake reports
+networkx = "*"  # for Snakemake reports
+cookiecutter = "*"
+xlrd = "*"
+opencv-python = "*"
+alive-progress = "*"
+
+[requires]
+# python_version = "3.8"
+

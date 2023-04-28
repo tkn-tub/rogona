@@ -1,0 +1,16 @@
+--- d = 118cm ---
+
+
+Spray Time = 20 ms
+
+Offset = 15 Frames
+
+___________________
+3% dy = 3.54 cm
+5% dy = 5.9  cm
+8% dy = 9.44 cm
+10% dy = 11.8cm
+
+--> pictures to those numbers with wrong formula (d-dy) / 2 
+
+which means. those are the pics to 1.5%, 2.5%, 4% and 5%

@@ -1,0 +1,121 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'rogona_ab_molcom'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--lib",
+                    "--package=rogona_ab_molcom"
+                ],
+                "filter": {
+                    "name": "rogona_ab_molcom",
+                    "kind": "lib"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "RUST_LOG": "trace"
+            }
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable LEARN 'rogona_ab_molcom'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=rogona_ab_molcom",
+                    "--package=rogona_ab_molcom"
+                ],
+                "filter": {
+                    "name": "rogona_ab_molcom",
+                    "kind": "bin"
+                }
+            },
+            "args": ["Air", "base_configs/test1.yaml", "Threshold", "base_configs/reconstruction.yaml"],
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "RUST_LOG": "trace",
+                "BINARY_MSG": "true",
+                "RUSTFLAGS": "-C target-cpu=native",
+            }
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable APPLY 'rogona_ab_molcom'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=rogona_ab_molcom",
+                    "--package=rogona_ab_molcom"
+                ],
+                "filter": {
+                    "name": "rogona_ab_molcom",
+                    "kind": "bin"
+                }
+            },
+            "args": ["Air", "yaml_configs/test1.yaml", "Threshold", "yaml_configs/recon_apply.yaml"],
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "RUST_LOG": "trace",
+                "BINARY_MSG": "true",
+                "RUSTFLAGS": "-C target-cpu=native",
+            }
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable CONFIG GEN 'rogona_ab_molcom'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=rogona_ab_molcom",
+                    "--package=rogona_ab_molcom"
+                ],
+                "filter": {
+                    "name": "rogona_ab_molcom",
+                    "kind": "bin"
+                }
+            },
+            "args": ["addv", "yaml_configs/test1.yaml", "variants", "d", "1.2", "0.1", "1.50"],
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "RUST_LOG": "trace",
+                "BINARY_MSG": "true",
+                "RUSTFLAGS": "-C target-cpu=native",
+            }
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'rogona_ab_molcom'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=rogona_ab_molcom",
+                    "--package=rogona_ab_molcom"
+                ],
+                "filter": {
+                    "name": "rogona_ab_molcom",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "RUST_LOG": "trace"
+            }
+        }
+    ]
+}

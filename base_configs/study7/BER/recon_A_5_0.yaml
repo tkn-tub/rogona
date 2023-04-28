@@ -1,0 +1,5 @@
+recon_mode: Apply
+mode_path: variants/study7/apply_config/A_5_0.yaml
+tx_far_out_path: variants/study7/far_out/A_5_0
+tx_near_out_path: variants/study7/near_out/A_5_0
+csv_path: variants/study7/eval/A_5_0

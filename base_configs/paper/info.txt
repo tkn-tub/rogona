@@ -1,0 +1,15 @@
+0) fix error in calculation due to wrong order of phases.
+-> virtual width adjustment in frame calculation corrected from -(w*3/8+ 9/1520 d/w) to -(w*1/8+ 9/1520 d/w)
+
+
+
+For case d = 280cm 
+A ) dy = 0 cm (L_1)
+
+off_f = 0 - 0.6
+
+
+B ) dy = 10cm (L_2)
+
+off_n = 0 - 0.6
+off_f = 0 - 0.6

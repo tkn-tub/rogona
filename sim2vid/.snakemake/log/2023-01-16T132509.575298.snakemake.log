@@ -1,0 +1,30 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 2
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	vid2sig_20210310m
+	1
+
+[Mon Jan 16 13:25:09 2023]
+rule vid2sig_20210310m:
+    input: video/d_160_dy_0_mps_800.mp4, scripts/postprocessing_mamoko2020air_video_rgb.py, scripts/postprocessing_mamoko2020air_signal_from_rgb.py
+    output: sig/d_160_dy_0_mps_800.rgb.csv, sig/d_160_dy_0_mps_800.sig.csv
+    jobid: 0
+    wildcards: d_dy_mps=d_160_dy_0_mps_800
+
+[Mon Jan 16 13:25:10 2023]
+Error in rule vid2sig_20210310m:
+    jobid: 0
+    output: sig/d_160_dy_0_mps_800.rgb.csv, sig/d_160_dy_0_mps_800.sig.csv
+    shell:
+        
+        python3 scripts/postprocessing_mamoko2020air_video_rgb.py             -i video/d_160_dy_0_mps_800.mp4             -o sig/d_160_dy_0_mps_800.rgb.csv             --fps 480
+        python3 scripts/postprocessing_mamoko2020air_signal_from_rgb.py             -i sig/d_160_dy_0_mps_800.rgb.csv             -o sig/d_160_dy_0_mps_800.sig.csv
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /mnt/d/Dokumente/Uni/BA/rebecca.pampu.ba/sim2vid/.snakemake/log/2023-01-16T132509.575298.snakemake.log

@@ -1,0 +1,6 @@
+#TODO
+#https://webgit.ccs-labs.org/git/CCS/mamoko2020pogona/src/branch/nanocom2021air/pogona/experiments/experiments.snakemake_config.yaml
+
+# Paths relative to the repo root directory:
+exp_results_path: pogona/simulation_results
+openfoam_cases_path: ~/mamoko-openfoam-cases

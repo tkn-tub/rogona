@@ -1,0 +1,3 @@
+th_cal: MinMax
+test_seq_path: base_configs/learn_sequences/study1.txt
+apply_path: variants/study6/apply_config/1_75_d_1.6

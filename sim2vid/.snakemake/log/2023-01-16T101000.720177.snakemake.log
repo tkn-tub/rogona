@@ -1,0 +1,3 @@
+ModuleNotFoundError in file /mnt/d/Dokumente/Uni/BA/rebecca.pampu.ba/sim2vid/Snakefile, line 6:
+No module named 'numpy'
+  File "/mnt/d/Dokumente/Uni/BA/rebecca.pampu.ba/sim2vid/Snakefile", line 6, in <module>

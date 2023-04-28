@@ -1,0 +1,76 @@
+# Adapted from: https://webgit.ccs-labs.org/git/CCS/mamoko2020pogona/src/branch/nanocom2021air/pogona/experiments/2021-03-10_nanocom-air-mobility/Snakefile
+
+configfile: "experiments.snakemake_config.yaml"
+
+import os
+import numpy as np
+
+results_path_20210310m = (
+    f"../../../{config['exp_results_path']}/2021-03-10_nanocom-air-mobility"
+)
+
+
+
+rule sim2vid_20210310m_mobility:
+    threads: workflow.cores * .5  # max. num threads; sim2vid_script uses ffmpeg
+    input:
+        #sim_log = (f"../variants/study1/liv/d_160_dy_0_mps_800"),
+        sim2vid_script=(
+            f"scripts/postprocessing_mamoko2020air_animation.py"
+        ),
+    output:
+        video=(
+            "video/{d_dy_mps}.mp4"
+        ),
+    params:
+        positions_dir=lambda wildcards, input, output, resources, threads: (
+            os.path.join(
+                "../variants/study1/liv/{d_dy_mps}",
+                "/"
+            )
+        ),
+    shell:
+        # Distance: 1 m + 1/2 width of camera FoV at particle level
+        # (Injection duration is 0.52 s, max. speed is 1 m/s) no it isn't!!
+        # tx rx distanz manuell ändern i guess...
+        """
+        python3 {input.sim2vid_script} \
+            -i {params.positions_dir} \
+            -o {output.video} \
+            --video-width 1280 \
+            --video-height 768 \
+            --tx-rx-distance-cm 80 \
+            --rx-lat-offset-cm 25
+        """
+
+rule vid2sig_20210310m:
+    input:
+        video=(
+            "video/{d_dy_mps}.mp4"
+        ),
+        vid2rgb_script=(
+            f"scripts/postprocessing_mamoko2020air_video_rgb.py"
+        ),
+        rgb2sig_script=(
+            f"scripts/postprocessing_mamoko2020air_signal_from_rgb.py"
+        ),
+    output:
+        rgb_csv=(
+            "sig/{d_dy_mps}.rgb.csv"
+        ),
+        sig_csv=(
+            "sig/{d_dy_mps}.sig.csv"
+        ),
+    shell:
+        """
+        python3 {input.vid2rgb_script} \
+            -i {input.video} \
+            -o {output.rgb_csv} \
+            --fps 480
+        python3 {input.rgb2sig_script} \
+            -i {output.rgb_csv} \
+            -o {output.sig_csv}
+        """
+
+
+# Quote https://webgit.ccs-labs.org/git/CCS/mamoko2020pogona/src/branch/nanocom2021air/pogona/experiments/2021-03-10_nanocom-air-mobility/Snakefile end.

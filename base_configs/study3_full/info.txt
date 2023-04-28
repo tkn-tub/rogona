@@ -1,0 +1,13 @@
+Distance offsets
+absolute or relative
+
+6 base configs 
+
+120, 160 with t_sym = 0.05
+160, 200, 240, 280 with t_sym = 0.075
+280, 320 with t_sym = 0.1
+
+parameter a)
+	dy_cm 0 1 21
+
+python study3.py

@@ -1,0 +1,69 @@
+# Air based Molecular Communication Test Channel for two senders and one receiver
+
+
+# Simulation Times
+
+# max simulation time in s (f64):
+t_sim: 10.8
+
+# symbol duration (spray duration + pause duration[min. 0.03]) in s (f64):
+t_sym: 0.075
+# spray duration in s (f64):
+t_sp: 0.02
+# delta time step (either 1/camera fps or something smaller to use sim2vidtool) ins s (f64):
+t_dts: 0.0020833333
+
+
+# Layout
+
+# distance between both inj im m (f64):
+d: 1.6
+# distance offset in m from d/2 (f64):
+dy: 0.0
+
+
+# Receiver Props
+
+# cam_fps:
+cam_fps: 480
+# z Position (Sprayer z is 0) in m (f64):
+cam_z: 0.25
+# height - how far can the camera see - commonly tube diameter (camera looks in negative z direction) in m (f64): 
+cam_height: 0.5
+# width on tube floor - maximum width seen in landscape picture im m (f64)
+cam_w_proj: 0.3
+# camera ratio length (f64)
+cam_ratio_l: 1280.0
+# camera ratio width (f64)
+cam_ratio_w: 768.0
+
+
+# Sender Props
+
+# molecules_per_spray (mps) (usize):
+mps: 1000
+# initial velocity / velocity mean in m/s (f64):
+v_mean: 12.82
+# velocity sigma (f64):
+v_sigma: 3.0
+# distribution_sigma for x and z angle (f64):
+dist_sigma: 1.55
+# liter_molecule_conversion (None if you want to use mps) in mol/liter (f64):
+lmc: 5555555.56
+
+# Offset for Inj far in symbol duration (t_sym) if you only got measurements in seconds just divide by t_sym (f64):
+off_f: 0.0
+# Message repetitions for Inj far (u32):
+rep_f: 30
+# Message path for Inj far (&str):
+msg_f: base_configs/msg/msg_f_1.txt
+# Offset for Inj near in symbol duration (t_sym) (f64):
+off_n: 0.0
+# Message repetitions for Inj near (u32):
+rep_n: 30
+# Message path for Inj near (&str):
+msg_n: base_configs/msg/msg_n_1.txt
+
+
+# Output file
+liv_path: variants/study3_full/liv/75_d_1.6

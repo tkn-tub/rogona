@@ -1,0 +1,188 @@
+Comparability Sim2Vid and SCC
+
+-- Test at which mol per litre conversion the overlap is not significantly impairing the LIV
+
+1) from the 6 base configs generate the mps variants
+
+python study1_0.py
+
+2) set Environment variables (PowerShell)
+
+$Env:RUST_LOG="info"
+$Env:BINARY_MSG="true"
+$Env:SIM2VID="true"
+
+3) run all simulations
+
+python study1_1.py
+
+4) go to the sim2vid dir
+
+5) run sim2vid in Unix with
+
+pipenv shell
+
+python3 scripts.py
+
+python3 sig2liv.py
+
+6) open spyder and run the code from study1_2.py in the console in 2 steps.
+
+Don't forget to change the manually set parameters.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Unix:
+
+
+
+(1) SCC data generation
+
+
+1) running simulation from start to end to get reconstruction frame.
+
+RUST_LOG="info" BINARY_MSG="true" SIM2VID="true" cargo run --release Air variants/study1/sim/{choose a simulation config} Threshold variants/study1/recon/{choose a recon config}
+
+OR:
+
+//set Environment variables with
+
+$Env:RUST_LOG="info"
+...
+
+//run cartesian product
+python study1.py
+
+
+2) set manual parameters in visualizer.py
+
+learn_seq = "base_configs/learn_sequences/{study1 learn_seq; specified in Learn Config}"
+
+frame = {frame specified in Apply Config}
+
+comment t_dts = cam_fps
+
+(and in the last section:)
+
+pick x = "SCC"
+
+
+3) run visualizer.py to get visualization, the mean values per group at reconframe and compare the fractions to sim2vid.
+
+e.g in Spyder IDE: runfile('{path to}/visualizer.py, args='{simulation config} frame')
+
+for me: runfile('D:/Dokumente/Uni/BA/rebecca.pampu.ba/visualizer.py', args='variants/test1/dy_cm_5.yaml')
+
+
+
+(2) SIM2VID data generation
+
+
+1) running simulation for sim2vid
+
+RUST_LOG="info" BINARY_MSG="true" SIM2VID="true" SIM_ONLY="true" cargo run --release Air variants/study1/sim/{choose a simulation config}
+
+
+2) molecule position data will lie in variants/study1/liv/_{variable_change}.txt/positions.csv.{time step no}
+
+
+3) remove .txt from folder name variants/study1/liv/_{variable_change}/positions.csv.{time step no}
+
+
+4) run snakemake script to generate LIVs
+
+pipenv shell
+
+output: "variants/study1/liv/_{variable_change}.txt"
+
+
+5) set manual parameters in visualizer.py
+
+learn_seq = "base_configs/learn_sequences/{study1 learn_seq; specified in Learn Config based on the msg used}"
+
+frame = {frame specified in Apply Config from the SCC run}
+
+uncomment t_dts = cam_fps
+
+(and in the last section:)
+
+pick x = "SIM2VID"
+
+
+6) run visualizer.py to get visualization, the mean values per group at reconframe and compare the fractions to rogona SCC.
+
+e.g in Spyder IDE: runfile('{path to}/visualizer.py, args='{simulation config} frame')
+
+for me: runfile('D:/Dokumente/Uni/BA/rebecca.pampu.ba/visualizer.py', args='variants/test1/dy_cm_5.yaml')
+
+
+______________________________________________________________________________
+
+PowerShell will need to set environment variables in seperate commands as
+
+$Env:RUST_LOG="info"
+
+and reset via
+
+Remove-Item Env:RUST_LOG
+
+furthermore, snakemake does not support powershell.
+
+
+
+
+
+________________________________________________________________________________
+
+Study setup -- investigated Parameters:
+
+For the distances:
+
+160 cm, 240 cm, 320 cm
+
+For distance offsets:
+
+0 cm, 8 cm
+
+(results in 6 base configs)
+
+For mps on a t_sp = 20 ms:
+
+800, 1000, 1200
+
+

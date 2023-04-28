@@ -1,0 +1,11 @@
+Validate the Reconstruction Frame finding method from Study 5
+
+Experiments from 	study3_full
+					study4
+
+get recon frame from apply config.
+
+only minmax for now.
+
+=> maybe adjusting ISI 1st half bound and ISI 2nd half bound
+=> also skewing the decision function

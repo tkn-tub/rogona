@@ -1,0 +1,5 @@
+recon_mode: Learn
+mode_path: variants/paper/1/learn_config/L_2-3
+tx_far_out_path: variants/paper/1/far_out/L_2-3
+tx_near_out_path: variants/paper/1/near_out/L_2-3
+csv_path: variants/paper/1/eval/A_2-3

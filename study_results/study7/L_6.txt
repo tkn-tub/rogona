@@ -1,0 +1,84 @@
+Min Frame: 70
+Max Frame: 72
+
+Max Diff Frame: 70
+Order: HNFL
+Order: HNFL
+Order: HNFL
+Order: HNFL
+_____________________________
+Using MinMax
+
+Input: base_configs/msg/msg_n_1.txt
+Output: variants/study7/near_out/L_6_0
+
+In this transmission of 142 Bit
+4 errors were detected.
+Resulting in a BER of 0.028169014084507043
+Those were 1 '0 -> 1' errors and 3 '1 -> 0' errors
+
+Input: base_configs/msg/msg_f_1.txt
+Output: variants/study7/far_out/L_6_0
+
+In this transmission of 142 Bit
+4 errors were detected.
+Resulting in a BER of 0.028169014084507043
+Those were 3 '0 -> 1' errors and 1 '1 -> 0' errors
+
+_____________________________
+Using Quartile
+
+Input: base_configs/msg/msg_n_1.txt
+Output: variants/study7/near_out/L_6_1
+
+In this transmission of 142 Bit
+1 errors were detected.
+Resulting in a BER of 0.007042253521126761
+Those were 1 '0 -> 1' errors and 0 '1 -> 0' errors
+
+Input: base_configs/msg/msg_f_1.txt
+Output: variants/study7/far_out/L_6_1
+
+In this transmission of 142 Bit
+1 errors were detected.
+Resulting in a BER of 0.007042253521126761
+Those were 0 '0 -> 1' errors and 1 '1 -> 0' errors
+
+_____________________________
+Using Median
+
+Input: base_configs/msg/msg_n_1.txt
+Output: variants/study7/near_out/L_6_2
+
+In this transmission of 142 Bit
+1 errors were detected.
+Resulting in a BER of 0.007042253521126761
+Those were 1 '0 -> 1' errors and 0 '1 -> 0' errors
+
+Input: base_configs/msg/msg_f_1.txt
+Output: variants/study7/far_out/L_6_2
+
+In this transmission of 142 Bit
+1 errors were detected.
+Resulting in a BER of 0.007042253521126761
+Those were 0 '0 -> 1' errors and 1 '1 -> 0' errors
+
+_____________________________
+Using ArithMean
+
+Input: base_configs/msg/msg_n_1.txt
+Output: variants/study7/near_out/L_6_3
+
+In this transmission of 142 Bit
+1 errors were detected.
+Resulting in a BER of 0.007042253521126761
+Those were 1 '0 -> 1' errors and 0 '1 -> 0' errors
+
+Input: base_configs/msg/msg_f_1.txt
+Output: variants/study7/far_out/L_6_3
+
+In this transmission of 142 Bit
+1 errors were detected.
+Resulting in a BER of 0.007042253521126761
+Those were 0 '0 -> 1' errors and 1 '1 -> 0' errors
+

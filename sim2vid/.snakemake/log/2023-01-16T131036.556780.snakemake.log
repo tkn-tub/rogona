@@ -1,0 +1,3 @@
+NameError in line 17 of /mnt/d/Dokumente/Uni/BA/rebecca.pampu.ba/sim2vid/Snakefile:
+name 'd_dy_mps' is not defined
+  File "/mnt/d/Dokumente/Uni/BA/rebecca.pampu.ba/sim2vid/Snakefile", line 17, in <module>

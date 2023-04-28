@@ -1,0 +1,25 @@
+Metrics:
+BER, ITR (study7_2.py), MOL Eye
+
+
+Picked 9 interesting cases without parameter change. 
+
+"1" d = 1.2, dy =  0cm, off_f = 0.15 , t_sym = 50 ms	=> B
+"2" d = 1.2, dy =  5cm, off   = 0   , t_sym = 50 ms		=> could work but frame finding is difficult
+"3" d = 1.6, dy =  6cm, off_f = 0.2 , t_sym = 50 ms		=> B
+
+"4" d = 2.0, dy =  3cm, off_n = 0.4 , t_sym = 75 ms		=> A
+"5" d = 2.4, dy =  8cm, off_f = 0.25 , t_sym = 75 ms	=> D
+"9" d = 2.4, dy = 17cm, off   = 0   , t_sym = 75 ms		=> D
+"6" d = 2.8, dy = 10cm, off_n = 0.55, t_sym = 75 ms		=> could work but breaks with max_frame restriction...
+
+"7" d = 2.8, dy = 16cm, off   = 0   , t_sym = 100ms 	=> F
+"8" d = 3.2, dy = 10cm, off_n = 0.45, t_sym = 100ms 	=> D
+
+study7.py
+
+For BER -> very long apply simulation
+
+For ITR -> h,l,n,l,f,l	; respective mean	; off up til first non-zero value of ftr	; frpsym	; sum up for "integral"
+
+For MOL-Eye -> at reconframe  - std - distance means

@@ -1,0 +1,21 @@
+Threshold Variance
+
+symbol count:
+144
+
+sim_no:
+300
+
+Threshold variance in study7.py
+
+
+
+
+
+
+
+Also:
+
+compare to Sim2Vid => Sim2Vid is not flexible to use 75ms t_sym.
+
+study8.py

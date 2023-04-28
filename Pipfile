@@ -1,0 +1,31 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+
+[dev-packages]
+numpy = "*"
+argparse = "*"
+scipy = "*"
+pandas = "*"
+matplotlib = "*"
+seaborn = "*"
+pdbpp = "*"
+sphinx = "*"
+autodocsumm = "*"
+gprof2dot = "*"
+pytest = "*"
+flake8 = "*"
+snakemake = "*"
+pygraphviz = "*"  # for Snakemake reports
+networkx = "*"  # for Snakemake reports
+cookiecutter = "*"
+xlrd = "*"
+opencv-python = "*"
+alive-progress = "*"
+pyyaml = "*"
+
+[requires]
+python_version = "3.8"

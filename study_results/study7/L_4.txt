@@ -1,0 +1,84 @@
+Min Frame: 50
+Max Frame: 61
+
+Max Diff Frame: 53
+Order: HNFL
+Order: HNFL
+Order: HNFL
+Order: HNFL
+_____________________________
+Using MinMax
+
+Input: base_configs/msg/msg_n_1.txt
+Output: variants/study7/near_out/L_4_0
+
+In this transmission of 142 Bit
+0 errors were detected.
+Resulting in a BER of 0
+Those were 0 '0 -> 1' errors and 0 '1 -> 0' errors
+
+Input: base_configs/msg/msg_f_1.txt
+Output: variants/study7/far_out/L_4_0
+
+In this transmission of 142 Bit
+0 errors were detected.
+Resulting in a BER of 0
+Those were 0 '0 -> 1' errors and 0 '1 -> 0' errors
+
+_____________________________
+Using Quartile
+
+Input: base_configs/msg/msg_n_1.txt
+Output: variants/study7/near_out/L_4_1
+
+In this transmission of 142 Bit
+0 errors were detected.
+Resulting in a BER of 0
+Those were 0 '0 -> 1' errors and 0 '1 -> 0' errors
+
+Input: base_configs/msg/msg_f_1.txt
+Output: variants/study7/far_out/L_4_1
+
+In this transmission of 142 Bit
+0 errors were detected.
+Resulting in a BER of 0
+Those were 0 '0 -> 1' errors and 0 '1 -> 0' errors
+
+_____________________________
+Using Median
+
+Input: base_configs/msg/msg_n_1.txt
+Output: variants/study7/near_out/L_4_2
+
+In this transmission of 142 Bit
+0 errors were detected.
+Resulting in a BER of 0
+Those were 0 '0 -> 1' errors and 0 '1 -> 0' errors
+
+Input: base_configs/msg/msg_f_1.txt
+Output: variants/study7/far_out/L_4_2
+
+In this transmission of 142 Bit
+0 errors were detected.
+Resulting in a BER of 0
+Those were 0 '0 -> 1' errors and 0 '1 -> 0' errors
+
+_____________________________
+Using ArithMean
+
+Input: base_configs/msg/msg_n_1.txt
+Output: variants/study7/near_out/L_4_3
+
+In this transmission of 142 Bit
+0 errors were detected.
+Resulting in a BER of 0
+Those were 0 '0 -> 1' errors and 0 '1 -> 0' errors
+
+Input: base_configs/msg/msg_f_1.txt
+Output: variants/study7/far_out/L_4_3
+
+In this transmission of 142 Bit
+0 errors were detected.
+Resulting in a BER of 0
+Those were 0 '0 -> 1' errors and 0 '1 -> 0' errors
+

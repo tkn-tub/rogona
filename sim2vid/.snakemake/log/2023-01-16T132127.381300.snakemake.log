@@ -1,0 +1,30 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 2
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	sim2vid_20210310m_mobility
+	1	vid2sig_20210310m
+	2
+
+[Mon Jan 16 13:21:27 2023]
+rule sim2vid_20210310m_mobility:
+    input: scripts/postprocessing_mamoko2020air_animation.py
+    output: video/d_160_dy_0_mps_800.mp4
+    jobid: 1
+    wildcards: d_dy_mps=d_160_dy_0_mps_800
+
+[Mon Jan 16 13:21:28 2023]
+Error in rule sim2vid_20210310m_mobility:
+    jobid: 1
+    output: video/d_160_dy_0_mps_800.mp4
+    shell:
+        
+        python3 scripts/postprocessing_mamoko2020air_animation.py             -i ../variants/study1/liv/{d_dy_mps}/             -o video/d_160_dy_0_mps_800.mp4             --video-width 1280             --video-height 768             --tx-rx-distance-cm 80
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /mnt/d/Dokumente/Uni/BA/rebecca.pampu.ba/sim2vid/.snakemake/log/2023-01-16T132127.381300.snakemake.log

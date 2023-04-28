@@ -1,0 +1,5 @@
+recon_mode: Learn
+mode_path: variants/study6/learn_config/2_75_d_2.4_dy_8
+tx_far_out_path: variants/study6/far_out/2_75_d_2.4_dy_8
+tx_near_out_path: variants/study6/near_out/2_75_d_2.4_dy_8
+csv_path: variants/study6/eval/2_75_d_2.4_dy_8

@@ -1,0 +1,12 @@
+Impact of symbol duration:
+
+Study 1 also painted the picture of higher distances being quite hard to distinguish because of the great time domain spread.
+Study 2 shall therefore investigate whether 
+
+a) an increased pause duration (increases bit duration; %sp reduced)
+b) an increased spray duration (does not increase bit duration; CAUTION: pause must be at least 30 ms because of the Tx architecture)
+c) combination of both
+
+helps this.
+
+python study2.py

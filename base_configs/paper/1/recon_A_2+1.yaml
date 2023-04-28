@@ -1,0 +1,5 @@
+recon_mode: Apply
+mode_path: variants/paper/1/apply_config/A_2+1
+tx_far_out_path: variants/paper/1/far_out/A_2+1
+tx_near_out_path: variants/paper/1/near_out/A_2+1
+csv_path: variants/paper/1/eval/A_2+1

@@ -1,0 +1,15 @@
+Reconstruction Frame
+
+1) find approximation for LIV_F (dy) and LIV_N (dy)
+
+d = 1.2 dy = [0, 5, 10] t_sym 50
+d = 1.6 dy = [0, 5, 10] t_sym 75
+d = 2.4 dy = [0, 5, 10] t_sym 100
+
+find f peak mean and n peak mean
+
+high symbol duration avoids too strong ISI effects
+
+mean over 3 sim runs
+
+=> result: analytical approximation for prediction to pic frame
